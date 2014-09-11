@@ -1,0 +1,618 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MyActivity"
+    android:background="@android:color/white">
+    <!-- The main content view -->
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/swtBlueTooth"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_gravity="left|top"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/swtData"
+            android:text="@string/BT_Toggle" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Data_Toggle"
+            android:id="@+id/swtData"
+            android:layout_gravity="center"
+            android:layout_below="@+id/swtWiFiState"
+            android:layout_marginTop="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NFC Toggle"
+            android:id="@+id/swtNFC"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="false"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/swtBlueTooth" />
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Wifi_Toggle"
+            android:id="@+id/swtWiFiState"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sync Toggle"
+        android:id="@+id/swtSync"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="240dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <!--
+   The navigation drawer
+    <ListView android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#111"/>
+-->
+    <TextView
+        android:text= "@string/manual_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textColor="@android:color/holo_red_dark"
+        android:typeface="normal"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="20sp"
+        android:textStyle="normal|bold" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnMinutes"
+        android:spinnerMode="dropdown"
+        android:focusable="true"
+        android:popupBackground="#ffffffff"
+        android:focusableInTouchMode="true"
+        android:layout_alignTop="@+id/txtKeepSync"
+        android:layout_toEndOf="@+id/txtKeepSync"
+        android:layout_marginLeft="20dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Save"
+        android:id="@+id/btnSave1"
+        android:layout_below="@+id/spnMinutes"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:textColor="@android:color/background_light"
+        android:typeface="sans"
+        android:minWidth="50dp"
+        android:textSize="16dp"
+        android:minHeight="20dp"
+        android:singleLine="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Keep Sync ON for"
+        android:id="@+id/txtKeepSync"
+        android:layout_below="@+id/swtSync"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/View03"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/btnSave1"/>
+    <View
+        android:id="@+id/View04"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/View03"/>
+
+
+    <TextView
+        android:text="@string/scheduler_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textColor="@android:color/holo_red_dark"
+        android:typeface="normal"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/View03"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="false"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/schedule_sync"
+        android:id="@+id/txtSyncView"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/schedule_every"
+        android:id="@+id/textView4"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/txtSyncView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnSyncHrs"
+        android:layout_alignLeft="@+id/spnMinutes"
+        android:layout_alignStart="@+id/spnMinutes"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/txtSyncView"
+        android:popupBackground="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/keep_sync_on"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/spnSyncHrs"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnMinutes2"
+        android:spinnerMode="dropdown"
+        android:layout_alignLeft="@+id/spnSyncHrs"
+        android:layout_alignStart="@+id/spnSyncHrs"
+        android:layout_below="@+id/spnSyncHrs"
+        android:popupBackground="#ffffffff" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sync ONLY when connected to WiFi"
+        android:id="@+id/chkSyncOnWiFiOnly"
+        android:layout_toStartOf="@+id/btnSave2"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:textSize="10dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_below="@+id/spnMinutes2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keep Sync ON while connected to WiFi"
+        android:id="@+id/chkKeepSyncOnWiFi"
+        android:layout_below="@+id/chkSyncOnWiFiOnly"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="10sp"
+        android:typeface="normal"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Save"
+        android:id="@+id/btnSave2"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:textColor="@android:color/background_light"
+        android:typeface="sans"
+        android:minWidth="50dp"
+        android:textSize="16dp"
+        android:minHeight="20dp"
+        android:layout_alignBottom="@+id/chkKeepSyncOnWiFi"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:id="@+id/View05"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/chkKeepSyncOnWiFi"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/Schedule_Wifi"
+        android:id="@+id/txtWifiView"
+        android:textStyle="bold"
+        android:layout_below="@+id/View05"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Wifi_StartTime"
+        android:id="@+id/textView6"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/txtWifiView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnWifiOnTime"
+        android:layout_alignLeft="@+id/spnMinutes"
+        android:layout_alignStart="@+id/spnMinutes"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/txtWifiView"
+        android:layout_toStartOf="@+id/spnDataOnTime"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:popupBackground="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Wifi_Off_Time"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnWifiOffTime"
+        android:spinnerMode="dropdown"
+        android:layout_alignLeft="@+id/spnSyncHrs"
+        android:layout_alignStart="@+id/spnSyncHrs"
+        android:layout_below="@+id/spnWifiOnTime"
+        android:layout_alignRight="@+id/spnWifiOnTime"
+        android:layout_alignEnd="@+id/spnWifiOnTime"
+        android:popupBackground="#ffffffff" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop WiFi Only if you are NOT connected to Wifi"
+        android:id="@+id/chkStopWifiCheck"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="10dp"
+        android:typeface="sans"
+        android:layout_alignBottom="@+id/btnSaveWifi"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnSaveWifi"
+        android:layout_toStartOf="@+id/btnSaveWifi"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Save"
+        android:id="@+id/btnSaveWifi"
+        android:layout_below="@+id/spnWifiOffTime"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:textColor="@android:color/background_light"
+        android:typeface="sans"
+        android:minWidth="50dp"
+        android:textSize="16dp"
+        android:minHeight="20dp"/>
+
+    <View
+        android:id="@+id/View06"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/btnSaveWifi"/>
+
+    <!-- DATA-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/Schedule_Data"
+        android:id="@+id/txtDataView"
+        android:textStyle="bold"
+        android:layout_below="@+id/View06"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Data_StartTime"
+        android:id="@+id/textView8"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/txtDataView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnDataOnTime"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/txtDataView"
+        android:layout_toRightOf="@+id/btnCancelAllSchedules"
+        android:layout_toEndOf="@+id/btnCancelAllSchedules"
+        android:popupBackground="#ffffffff" />
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Data (2G/3G/) only if you are NOT connected to Wifi"
+        android:id="@+id/chkStartDataCheck"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="10dp"
+        android:typeface="normal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/spnDataOnTime"
+        android:layout_alignRight="@+id/btnSaveData"
+        android:layout_alignEnd="@+id/btnSaveData"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Data_Off_Time"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/chkStartDataCheck"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnDataOffTime"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/chkStartDataCheck"
+        android:layout_alignLeft="@+id/spnDataOnTime"
+        android:layout_alignStart="@+id/spnDataOnTime"
+        android:popupBackground="#ffffffff" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Data (2G/3G) Only if you are connected to Wifi"
+        android:id="@+id/chkStopData"
+        android:layout_toStartOf="@+id/btnSaveData"
+        android:textSize="10dp"
+        android:layout_below="@+id/spnDataOffTime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnSaveData"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Save"
+        android:id="@+id/btnSaveData"
+        android:layout_below="@+id/spnDataOffTime"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:textColor="@android:color/background_light"
+        android:typeface="sans"
+        android:minWidth="50dp"
+        android:textSize="16dp"
+        android:minHeight="20dp"/>
+
+    <View
+        android:id="@+id/View07"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/btnSaveData"/>
+    <!--END DATA-->
+
+    <!-- BT-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/Schedule_BT"
+        android:id="@+id/txtBTView"
+        android:textStyle="bold"
+        android:layout_below="@+id/View07"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BT_StartTime"
+        android:id="@+id/textView10"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/txtBTView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnBTOnTime"
+        android:layout_alignLeft="@+id/spnMinutes"
+        android:layout_alignStart="@+id/spnMinutes"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/txtBTView"
+        android:popupBackground="#ffffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BT_StopTime"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/textView10"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginTop="10dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spnBTOffTime"
+        android:spinnerMode="dropdown"
+        android:layout_alignLeft="@+id/spnSyncHrs"
+        android:layout_alignStart="@+id/spnSyncHrs"
+        android:layout_below="@+id/spnBTOnTime"
+        android:popupBackground="#ffffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Save"
+        android:id="@+id/btnSaveBT"
+        android:layout_below="@+id/spnBTOffTime"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:textColor="@android:color/background_light"
+        android:typeface="sans"
+        android:minWidth="50dp"
+        android:textSize="16dp"
+        android:minHeight="20dp"/>
+
+    <View
+        android:id="@+id/View08"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/btnSaveBT"/>
+    <!--END BT-->
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CancelAll"
+        android:id="@+id/btnCancelAllSchedules"
+        android:shadowColor="@android:color/holo_blue_bright"
+        android:layout_below="@+id/View08"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/button_onoff_indicator_on"
+        android:textColor="@android:color/background_light"
+        android:typeface="sans"
+        android:textSize="16dp"
+        android:minHeight="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minWidth="175dp" />
+
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>

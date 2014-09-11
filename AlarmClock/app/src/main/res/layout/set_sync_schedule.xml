@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal">
+
+
+        <ToggleButton
+            android:layout_width="42sp"
+            android:layout_height="30dp"
+            android:id="@+id/toggleButton"
+            android:textOff="SU"
+            android:textOn="SU"
+            android:checked="false"
+            android:textSize="12sp"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            android:textColor="@android:color/white" />
+        <ToggleButton
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton2"
+            android:checked="false"
+            android:textOff="MO"
+            android:textOn="MO"
+            android:textSize="12sp"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            android:textColor="@android:color/white" />
+
+        <ToggleButton
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton3"
+            android:textOff="TU"
+            android:textOn="TU"
+            android:textSize="12sp"
+            android:checked="false"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            android:textColor="@android:color/white" />
+
+        <ToggleButton
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton4"
+            android:textOff="WE"
+            android:textOn="WE"
+            android:textSize="12sp"
+            android:checked="false"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            android:textColor="@android:color/white" />
+
+        <ToggleButton
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton5"
+            android:textOff="TH"
+            android:textOn="TH"
+            android:textSize="12sp"
+            android:checked="false"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            android:textColor="@android:color/white" />
+
+        <ToggleButton
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton6"
+            android:textOff="FR"
+            android:textOn="FR"
+            android:textSize="12sp"
+            android:checked="false"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            android:textColor="@android:color/white" />
+        <ToggleButton
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton7"
+            android:textOff="SA"
+            android:textOn="SA"
+            android:textSize="12sp"
+            android:checked="false"
+            style="@style/toggleButton"
+            android:background="@drawable/ic_toggle_bg"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Time"
+        android:id="@+id/btnSyncStartTime" />
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/"
+        android:layout_gravity="center_horizontal" />
+
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+</LinearLayout>

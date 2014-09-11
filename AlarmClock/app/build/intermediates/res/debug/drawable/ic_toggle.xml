@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_checked="false"
+        android:drawable="@drawable/ic_toggle_off" />
+    <item
+        android:state_checked="true"
+        android:drawable="@drawable/ic_toggle_on" />
+</selector><!-- From: file:/C:/Users/PuruSuni/Google%20Drive/AndroidDev/AlarmClock/app/src/main/res/drawable/ic_toggle.xml -->

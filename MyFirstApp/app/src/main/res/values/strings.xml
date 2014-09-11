@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Schedule-ALL (PRO)</string>
+    <string name="manual_control">Manual Connection Control</string>
+    <string name="scheduler_control">Scheduled Connection Control</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_faqs">FAQs</string>
+    <string name="Title">Use this screen to toggle your connections</string>
+    <string name="Save">Save</string>
+    <string name="schedule_sync">Schedule Sync</string>
+    <string name="schedule_every">Start Sync Every</string>
+    <string name="keep_sync_on">Keep Sync On For</string>
+    <string name="CancelAll">Cancel All Schedules</string>
+    <string name="Wifi_Off_Time">Stop Wifi At</string>
+    <string name="Wifi_StartTime">Start Wifi At</string>
+    <string name="Schedule_Wifi">Schedule Wifi</string>
+    <string name="Data_Off_Time">Stop Data (2G/3G) At</string>
+    <string name="Data_StartTime">Start Data (2G/3G) At</string>
+    <string name="Schedule_Data">Schedule Data</string>
+    <string name="Schedule_BT">Schedule Bluetooth</string>
+    <string name="BT_StartTime">Start Bluetooth At</string>
+    <string name="BT_StopTime">Stop  Bluetooth At</string>
+    <string name="application_error">You Do Not have Proper License for this App</string>
+    <string name="dont_allow">You do not have proper license for this app.</string>
+    <string name="allow">Allow The App</string>
+    <string name="title_activity_faq">Schedule-ALL FAQ\'s</string>
+    <string name="title_activity_settings">Schedule-ALL Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="question_mark">FAQ</string>
+    <string name="Wifi_Toggle">Wifi Toggle</string>
+    <string name="Data_Toggle">Data Toggle</string>
+    <string name="BT_Toggle">Bluetooth Toggle</string>
+    <string name="title_activity_tabbed_interface">tabbed_interface</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+</resources>

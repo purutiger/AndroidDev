@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="HTML">
+		<meta name="author" content="Puru">
+
+		<title>Schedule-ALL - FAQs</title>
+
+		<link href="bootstrap.css" rel="stylesheet">
+		<link href="font-awesome.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="./includes/js/html5shiv.js"></script>
+			<script src="./includes/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="page-header">
+			<div class="container">
+				<h3>Schedule-ALL FAQs</h3>
+				
+			</div>			
+		</div>
+	
+		<div class="container">
+			<div id="faq">
+				
+					
+						<h2><span>1. </span>What does the app do?</h2>
+						<p >App allows you to perform following actions
+						<br><br>
+						<span>a. Manually Toggle WiFi, Bluetooth, Data and NFC connections. </span>
+						<br>
+						<br>
+						<span>b. Manually start Sycn and set the duration for the sync to run.
+						<br>
+						<br>
+						<span>c. Schedule Sync to start every X minutes and run for Y minutes once it has started.
+						<br>
+						<br>
+						<span>d. Schedule Wifi, Bluetooth, Data and Sync to start and stop at specific time of the day everyday.
+						
+						<br><br>
+						<span>e. Cancel All the previous schedules (so you can start a fresh).
+						
+						</p>
+					<br><br>
+					
+						<h2><span >2. </span>Once I have set the schedules, how long will these schedules run?</h2>
+						<p>
+						
+						<span>All schedules will run as long as you don;t cancel your schedules (Using 'Cancel All Schedules' button) or un-install the app. The app will re-schedule all your previously set schedules on reboot. 
+						So you dont need to worry about setting them again. Schedules will also be intact even if you update the app (without un-installing) from the play store.
+						</span>
+						
+						</p>
+					<br><br>
+						<h2><span>3. </span>Will the app drain my battery?</h2>
+						<p>No, app itself is not in the memory after you have set your schedules. 
+						App uses Android's AlarmManager APIs to delegate the schedules to Android OS. 
+						It behaves in exactly the same way your android alarm clock does, except everything is in the background, so you wont even notice it.
+						</p>
+					<br><br>
+						<h2><span>4. </span>Why would I need this app?</h2>
+						<p>
+						If, like me, you have set times when you want Data/Bluetooth/WiFi/Sync to be enabled or disabled everyday and you dont want to manually go into settings to do all this, this app will do it for you. 
+						Ensuring right connections are enabled at the right time. Controlling sync will help you to not only ease your life but it will also save your device's battery life. 
+						<br><br>
+						My Settings are:
+						<br><br>
+						<b>Sync</b>: Run every 2 hours for 5 mins (this is more than enough for downloading emails over 3G or Wifi. On 2G you may increase the duration to run to maybe 10 mins)
+						<br><br>
+						<b>Wifi</b>: Start time-17:00 AND Stop time-10:00 (this is the time I am at home, I start wifi an hour earlier than I reach home)
+						<br><br>
+						<b>Data</b>: Start time-8:00 AND Stop time-18:00 (this is the time when I am out)
+						<br><br>
+						<b>Bluetooth</b>: Start time-8:00 AND Stop time-18:00 (this is the time when I am out)
+						
+						</p>
+					<br><br>
+					<h2><span>5. </span>Why does manual toggle of NFC take me to settings? and why cant I schedule NFC?</h2>
+						<p>
+							Answer to first question: Google Android APIs doesnt provide any direct control over NFC connections to programatically stop or start it. Apps can only use the NFC connection, if it has alreayd been started.
+							
+							I have given the next best option to let the user go to the system settings screen and toggle it manually.
+							<br><br>
+							Answer to second question: Since Android APIs do not allow to manually start/stop NFC, its pointless to provide a scheduling mechnism, unfortunately! :-(
+						</p>
+					<br><br>
+						<h2><span>6. </span>Will Schedule-ALL help me save my battery?</h2>
+						<p>
+							Although I dont explicitly claim that Schedule-ALL will save battery juice, it has been proven that using connections that you only need and stopping all other connections does improve battery life.
+							Most battery saver apps use controlling connections as one of the foremost weapon to protect battery juice from draining.
+							Also Sycn is huge drainer of battery and it uses a lot of data if its on continuously. So yes, it will definitely help your device battery perform better also saving you data usage.
+							
+						</p>
+						
+						<h2><span>7. </span>How to use settings <small><b>'Stop Wifi only if Wifi is Disconnected', 'Start Data Only if Wifi is NOT Connected' and 'Stop Data Only if Wifi Is Connected' </b></small>?</h2>
+						<p>
+							<br><br>
+							<b>Stop Wifi only if Wifi is Disconnected</b> - If you have scheduled your wifi to be stopped at a certain time say at 1:00PM everyday if you check this box then the app will check
+							if you are still connected to any WiFi network. If you are connected to any Wifi Network then it will not disable the WiFi and rechedule itself to check back to see if the Wifi can be 
+							disconnected in 30 minutes.
+							<br><br>
+							<b>Start Data Only if Wifi is NOT Connected</b> - This will prevent your scheduled data from starting if you are connected to WiFi. 
+							
+							<br><br>
+							<b>Stop  Data Only if Wifi is Connected</b> - This will start the data only if you are disconnected from WiFi.
+							<br><br>
+							There 2 Purpose these settings server
+							<br><br>
+							1. They ensure that Data (2G/3G) is not enabled unnecessarily if you are already connected to WiFi.
+							<br><br>
+							2. They ensure that you always connected to one network or the other.
+							<br><br>
+							<b>These settings only affect your scheudled conenction controls. As usual, you can always override these with manual settings.</b>
+													
+						</p>
+						
+						<h2><span>8. </span>What is <small><b>'Sync ONLY when connected to WiFi</b></small>?</h2>
+						<p>
+							<br><br>
+							If you have scheduled your sync to start at specific times, then checking this setting will start the sync only if the device is connected to WiFi network. 
+							If you are n 2G or 3G then the Sync will not start. This doesn’t affect the manual Sync.
+													
+						</p>
+					
+			</div>
+		</div>
+		<div class="cta-bar">
+			<div class="container">
+				<h3>Can't find what you are looking for? Write to us.</h3>
+				<a href="mailto:purutiger.dev@gmail.com?subject=Schedule-ALL%20Query" class="btn btn-main btn-lg">Contact</a>
+			</div>
+		</div>
+		
+		<script type="text/javascript" async="" src="ga.js"></script><script src="jquery-2.0.3.min.js"></script>
+		<script src="bootstrap.min.js"></script>
+		<script src="default.js"></script>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-22160233-8']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	
+
+
+</body></html>
